@@ -45,30 +45,24 @@ def manuplated_df():
     '''we are using this function to manipulate the transposed
     # dataframe to a new form that will be useful for analysis'''
     # Creating a new dataframe
-    # print('inside')
     data_n = pd.DataFrame(columns=range(8))
 
     # Take the years as a list from the data dataframe
     index = data_t.index
-    # print(index)
     year_array = []
     for i in index:
         year_array.append(i)
     year = year_array[1:]
-    # print(year)
     # extracting the indicator names
     col_one_list = (data['Indicator Name'].tolist())[:6]
-    # print(col_one_list)
     # extracting country name using groupBy and adding as a list
     country_values = list((data.groupby('Country Name', sort=False)).groups)
     # extracting the count of countries
     countries_count = len(country_values)
-
     # we are adding the required coulumn names
     # along with the country_values list and reversing the complete list
     col_one_list.extend(['Country Name', 'Year'])
     col_one_list.reverse()
-    # print(col_one_list)
     # setting the column names
     data_n.columns = col_one_list
 
