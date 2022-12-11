@@ -165,8 +165,6 @@ data_countries['Mean_pop(in million)'] = data_countries['Mean_pop(in million)']/
 # we are taking 10 years value by slicing
 data_countries = data_countries.iloc[50:61, :]
 data_countries = data_countries.dropna()
-
-
 # In a line plot over ten years periods, 
 # the average CO2 emissions and populations of four countries are displayed.
 # create figure and axis objects with subplots()
@@ -209,7 +207,6 @@ skewness = skew(data_countries['CO2_B'])
 
 # plottting heatmap to show the relation
 # between indicators of Norway and Bangladesh
-
 # create figure and axis objects with subplots()
 fig, (ax1, ax2) = plt.subplots(ncols=2, figsize=(16, 7))
 # we are removing Access to electricity (% of population) column from the data
@@ -249,7 +246,6 @@ plt.show()
 
 # plotting barplot to show the electricity access of 10 years
 # for Tanzania and Switzerland
-
 # we are taking 10 years data using slicing
 data3 = data_T.iloc[50:61, :]
 data4 = data_S.iloc[50:61, :]
